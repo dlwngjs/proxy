@@ -72,7 +72,7 @@ int main(){
 	
 	proxy_addr.sin_family = AF_INET;
 	proxy_addr.sin_addr.s_addr =INADDR_ANY; //현재 컴퓨터의 ip주소를 소켓에 저장
-	proxy_addr.sin_port = htons(7027); //프로그램의 포트번호를 변환해서 소켓에 저장
+	proxy_addr.sin_port = htons(4000); //프로그램의 포트번호를 변환해서 소켓에 저장
 
 	if(bind(proxy_sock_fd_for_clien, (struct sockaddr *) &proxy_addr,sizeof(proxy_addr)) < 0 ){
 		//만들어진 서버 소켓과 서버 구조체를 묶는다. 바인드가 성공하면 0을 리턴하는데 0은 거짓을 의미하므로
